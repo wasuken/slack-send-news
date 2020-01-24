@@ -25,6 +25,4 @@
                                 (format "<%s|%s>"
                                         (get news-json "url")
                                         (get  news-json "title"))))))
-    (reduce str
-            "<br>"
-            @news-msgs)))
+    (clojure.string/join "\n" @news-msgs)))
